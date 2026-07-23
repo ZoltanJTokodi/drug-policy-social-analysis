@@ -1,15 +1,13 @@
 # -------------------------------------------------------------------------
 # Projekt: Drogháború és Szociális Degradáció Analízis
 # Leírás: Eurostat adatok, károsodási mátrix és a tilalom vastörvénye
-# Mentési hely: C:/Users/TokodiZoli/Documents/Documents/R projectek/Drog
 # -------------------------------------------------------------------------
 
 library(eurostat)
 library(tidyverse)
+library(here) # Dinamikus és hordozható útvonalkezelés
 
-# Munkakönyvtár beállítása a te mappádra
-# (R-ben a fordított perjelet '/' kell használni az elérési utaknál)
-setwd("C:/Users/TokodiZoli/Documents/Documents/R projectek/Drog")
+# Nincs több setwd()! A here() automatikusan tudja, hol van a .Rproj fájl.
 
 # --- 1. ÁBRA: EUROSTAT HALÁLOZÁSI TRENDEK ---
 raw_deaths <- get_eurostat("tps00149", time_format = "num")
@@ -104,6 +102,9 @@ p3 <- ggplot(piaci_trend, aes(x = Ev, y = Index, color = Mutato, group = Mutato)
     x = "Év", y = "Piaci index (Relatív intenzitás)", color = "Trend:"
   )
 
-ggsave("03_iron_law_prohibition.png", plot = p3, width = 10, height = 6, dpi = 300)
+# Mentések a here() csomaggal:
+ggsave(here("01_eurostat_halalozasok.png"), plot = p1, width = 10, height = 6, dpi = 300)
+ggsave(here("02_szocialis_degradacio.png"), plot = p2, width = 10, height = 6, dpi = 300)
+ggsave(here("03_iron_law_prohibition.png"), plot = p3, width = 10, height = 6, dpi = 300)
 
-print("Minden fájl sikeresen elmentve a megadott mappába!")
+print("Minden fájl sikeresen elmentve a projekt mappájába!")
