@@ -56,6 +56,13 @@ A tiltás és a rendőrségi szigor azonban egy klasszikus **gazdasági helyette
 * `02_szocialis_degradacio.png`: A 4 vizsgált szer összehasonlító ártalmassági és hálózati degradációs profilja.
 * `03_iron_law_prohibition.png`: A tilalom vastörvényét és a piaci helyettesítést bemutató trendábra.
 
+## Futtatás és Reprodukálhatóság
+
+A teljes elemzés futtatásához és a grafikák generálásához nyisd meg az R konzolt a projekt mappájában, majd futtasd:
+
+```R
+source("script.R")
+
 Források / References
 
     Makro-statisztikák (Eurostat): * Eurostat Database: Drug-related deaths - National statistics and European Monitoring Centre for Drugs and Drug Addiction (EMCDDA) data. Dataset code: tps00149.
@@ -71,10 +78,3 @@ Források / References
         Nutt, D. J., King, L. A., & Phillips, L. D. (2010). Drug harms in the UK: a multicriteria decision analysis. The Lancet, 376(9752), 1558-1565. (A szerek relatív ártalmasságának és a szociális hálók károsodásának módszertani alapja).
 
         European Monitoring Centre for Drugs and Drug Addiction (EMCDDA) éves jelentései a nemzeti drogpolitikák hatásairól.
-
-## Futtatás és Reprodukálhatóság
-
-A teljes elemzés futtatásához és a grafikák generálásához nyisd meg az R konzolt a projekt mappájában, majd futtasd:
-
-```R
-source("script.R")
