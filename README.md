@@ -5,7 +5,8 @@ Markdown
 Ez a kutatási projekt az R nyelv segítségével mutatja be a tilalmi drogpolitika (a "drogháború") rendszerszintű kudarcát és annak nem várt piaci következményeit.
 
 ## 1. Pillér: A kemény adatok (Eurostat halálozások)
-A tiltópolitika elsődleges célja az emberi életek megóvása lenne. Az Eurostat kábítószer-függőségi halálozási adatai (`tps00149`) alapján azonban a trendek Európa-szerte stagnálnak vagy növekednek. Különösen beszédes Svédország esete, ahol a zéró tolerancia ellenére a halálozási arányszám kiugróan magas.
+A tiltópolitika elsődleges célja az emberi életek megóvása lenne. Az Eurostat kábítószer-függőségi halálozási adatai (`tps00149`) alapján azonban a trendek Európa-szerte stagnálnak vagy növekednek. Különösen beszédes Svédország esete, ahol a zéró tolerancia ellenére a halálozási arányszám kiugróan magas. 
+> 🇸🇪 **A svéd paradoxon:** > Svédország esete a legtisztább példa a tilalmi politika kudarcára. Az ország Európa egyik legszigorúbb, zéró toleranciára épülő drogpolitikáját alkalmazza (ahol magát a fogyasztást és a szervezetben kimutatható jelenlétet is kriminalizálják). A kriminalizáció elrettentő hatása helyett azonban a valóság az, hogy **Svédországban az egyik legmagasabb a százezer lakosra jutó kábítószer-halálozások aránya az EU-ban**. A szigor nem a fogyasztást szüntette meg, hanem a segítségkérést gátolta meg, elszigetelve a kockázati csoportokat az egészségügyi ellátórendszertől.
 
 ![Eurostat Halálozási Trendek](01_eurostat_halalozasok.png)
 
