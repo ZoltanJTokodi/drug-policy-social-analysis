@@ -33,3 +33,25 @@ Mivel a marihuána (organikus) szállítása a mérete miatt kockázatosabb, a r
 A teljes elemzés és a grafikok reprodukálásához futtasd az R konzolban:
 ```R
 source("script.R")
+
+Másold be ezt a szekciót a README.md fájlod legvégére (nyisd meg a fájlt a Jegyzettömbbel, tekerj a legaljára, üss egy Entert, és illeszd be).
+
+Ezzel a formázással pontosan beilleszkedik a meglévő szöveged alá:
+Markdown
+
+
+## Felhasznált Források & Szakirodalom (References)
+
+Az elemzés a hivatalos európai statisztikák és a nemzetközi kriminálökonómiai/addikciós szakirodalom adatain alapul:
+
+1. **Makro-statisztikai adatok (1. ábra):**
+   * **Forrás:** Eurostat (Az Európai Unió Statisztikai Hivatala) & EUDA (European Union Drugs Agency).
+   * **Adatkészlet:** `tps00149` (*Deaths due to drugs dependence, by sex*). A standardizált halálozási arányszámokat mutatja 100 000 lakosra vetítve.
+
+2. **Drog-ártalmassági és degradációs mátrix (2. ábra):**
+   * **Alapul vett tanulmány:** Nutt, D. J., King, L. A., & Phillips, L. D. (2010). *Drug harms in the UK: a multicriteria decision analysis.* **The Lancet**, 376(9752), 1558-1565.
+   * **Elmélet:** Ez a kutatás számszerűsítette először külön az egyéni károkat (fizikai/kognitív leépülés) és a szociális károkat (izoláció, stigma), rávilágítva a marihuána és a szintetikus stimulánsok (metamfetamin) közötti radikális különbségekre.
+
+3. **Az Ironikus Tilalom Törvénye (3. ábra):**
+   * **Elméleti háttér:** Richard Cowan (1986). *The Iron Law of Prohibition*. 
+   * **Koncepció:** Közgazdasági és kriminológiai törvényszerűség, amely leírja a "Hydra-effektust": a bűnüldözési szigor fokozódása (lefoglalások növekedése) a piacot a kisebb térfogatú, de potensebb, kiszámíthatatlanabb és toxikusabb szintetikus anyagok felé kényszeríti.
