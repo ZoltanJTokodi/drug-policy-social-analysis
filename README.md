@@ -47,6 +47,21 @@ A tiltás és a rendőrségi szigor azonban egy klasszikus **gazdasági helyette
 
 ![Iron Law of Prohibition](03_iron_law_prohibition.png)
 
+Források / References
+
+    Makro-statisztikák (Eurostat): * Eurostat Database: Drug-related deaths - National statistics and European Monitoring Centre for Drugs and Drug Addiction (EMCDDA) data. Dataset code: tps00149.
+
+    Közgazdasági háttér (A Tilalom Vastörvénye):
+
+        Cowan, R. (1986). How the War on Drugs Creates Hard Drug Use. Public Interest, 83, 26-31. (The Iron Law of Prohibition elméleti alapjai).
+
+        Thornton, M. (1991). The Economics of Prohibition. Salt Lake City, UT: University of Utah Press.
+
+    Szociális Degradáció és Ártalomcsökkentés:
+
+        Nutt, D. J., King, L. A., & Phillips, L. D. (2010). Drug harms in the UK: a multicriteria decision analysis. The Lancet, 376(9752), 1558-1565. (A szerek relatív ártalmasságának és a szociális hálók károsodásának módszertani alapja).
+
+        European Monitoring Centre for Drugs and Drug Addiction (EMCDDA) éves jelentései a nemzeti drogpolitikák hatásairól.
 ---
 
 ## A projekt fájlstruktúrája
@@ -63,18 +78,4 @@ A teljes elemzés futtatásához és a grafikák generálásához nyisd meg az R
 ```R
 source("script.R")
 
-Források / References
 
-    Makro-statisztikák (Eurostat): * Eurostat Database: Drug-related deaths - National statistics and European Monitoring Centre for Drugs and Drug Addiction (EMCDDA) data. Dataset code: tps00149.
-
-    Közgazdasági háttér (A Tilalom Vastörvénye):
-
-        Cowan, R. (1986). How the War on Drugs Creates Hard Drug Use. Public Interest, 83, 26-31. (The Iron Law of Prohibition elméleti alapjai).
-
-        Thornton, M. (1991). The Economics of Prohibition. Salt Lake City, UT: University of Utah Press.
-
-    Szociális Degradáció és Ártalomcsökkentés:
-
-        Nutt, D. J., King, L. A., & Phillips, L. D. (2010). Drug harms in the UK: a multicriteria decision analysis. The Lancet, 376(9752), 1558-1565. (A szerek relatív ártalmasságának és a szociális hálók károsodásának módszertani alapja).
-
-        European Monitoring Centre for Drugs and Drug Addiction (EMCDDA) éves jelentései a nemzeti drogpolitikák hatásairól.
