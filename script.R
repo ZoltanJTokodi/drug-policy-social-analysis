@@ -33,24 +33,53 @@ p1 <- ggplot(cleaned_deaths, aes(x = year, y = values, color = country, group = 
 
 ggsave("01_eurostat_halalozasok.png", plot = p1, width = 10, height = 6, dpi = 300)
 
-# --- 2. ÁBRA: SZOCIÁLIS DEGRADÁCIÓS MÁTRIX ---
+# --- 2. ÁBRA: SZOCIÁLIS DEGRADÁCIÓS MÁTRIX (BŐVÍTETT) ---
 drog_karok <- tibble(
-  Szer = c("Marihuána", "Marihuána", "Marihuána", "Metamfetamin", "Metamfetamin", "Metamfetamin"),
-  Dimenzio = c("Fizikai leépülés", "Kognitív romlás", "Szociális izoláció (Stigma)",
-               "Fizikai leépülés", "Kognitív romlás", "Szociális izoláció (Stigma)"),
-  Ertek = c(10, 15, 20, 75, 85, 90)
+  Szer = rep(c("Marihuána", "Kokain", "Metamfetamin", "Heroin"), each = 3),
+  Dimenzio = rep(c("Fizikai leépülés", "Kognitív romlás", "Szociális izoláció (Stigma)"), times = 4),
+  Ertek = c(
+    10, 15, 20,  # Marihuána
+    45, 55, 60,  # Kokain
+    75, 85, 90,  # Metamfetamin
+    95, 80, 98   # Heroin
+  )
+)
+
+# Színpaletta beállítása a szerek veszélyessége szerint (zöldtől a mélyvörösig/feketéig)
+szer_szinek <- c(
+  "Marihuána"    = "#2ca02c",  # Zöld
+  "Kokain"       = "#e7ba52",  # Narancs/Sárga
+  "Metamfetamin" = "#d62728",  # Világosabb vörös
+  "Heroin"       = "#7f0f14"   # Sötétvörös / Bordó
 )
 
 p2 <- ggplot(drog_karok, aes(x = Dimenzio, y = Ertek, fill = Szer)) +
-  geom_bar(stat = "identity", position = "dodge", alpha = 0.9, width = 0.7) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8), alpha = 0.9, width = 0.7) +
   coord_flip() + 
-  scale_fill_manual(values = c("Marihuána" = "#2ca02c", "Metamfetamin" = "#d62728")) +
+  scale_fill_manual(values = szer_szinek, breaks = c("Marihuána", "Kokain", "Metamfetamin", "Heroin")) +
   theme_minimal(base_size = 14) +
-  theme(plot.title = element_text(face = "bold", size = 14), legend.position = "top") +
-  labs(title = "Egyéni és Szociális degradáció: Marihuána vs. Metamfetamin",
-       x = "Károsodás jellege", y = "Súlyossági index (0 - 100)", fill = "Vizsgált szer:")
+  theme(
+    plot.title = element_text(face = "bold", size = 14), 
+    legend.position = "top",
+    panel.grid.major.y = element_blank() # Tisztább megjelenés a vízszintes oszlopokhoz
+  ) +
+  labs(
+    title = "Különböző szerek egyéni és szociális degradációs profilja",
+    subtitle = "Összehasonlítás a fizikai leépülés, kognitív romlás és a társadalmi kirekesztettség mentén",
+    x = "Károsodás jellege", 
+    y = "Súlyossági index (0 - 100)", 
+    fill = "Vizsgált szer:"
+  )
 
 ggsave("02_szocialis_degradacio.png", plot = p2, width = 10, height = 6, dpi = 300)
+
+# --- 3. ÁBRA: AZ IRONIKUS TILALOM TÖRVÉNYE (The Iron Law of Prohibition) ---
+piaci_trend <- tibble(
+  Ev = 2015:2025,
+  Organikus_Tiltas = c(40, 45, 52, 58, 65, 70, 78, 82, 85, 88, 92), 
+  Szintetikus_Elterjedes = c(15, 18, 22, 30, 42, 55, 68, 75, 83, 91, 98) 
+) %>%
+  pivot_longer(cols = -Ev, names_to = "Mutato", values_to = "Index")
 
 # --- 3. ÁBRA: AZ IRONIKUS TILALOM TÖRVÉNYE (The Iron Law of Prohibition) ---
 piaci_trend <- tibble(
