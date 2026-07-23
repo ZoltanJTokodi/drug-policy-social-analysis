@@ -29,17 +29,6 @@ Mivel a marihuána (organikus) szállítása a mérete miatt kockázatosabb, a r
 * `02_szocialis_degradacio.png`: A szerek összehasonlító ártalmassági grafikonja.
 * `03_iron_law_prohibition.png`: A tilalom vastörvényét bemutató piaci trendábra.
 
-## Futtatás
-A teljes elemzés és a grafikok reprodukálásához futtasd az R konzolban:
-```R
-source("script.R")
-
-Másold be ezt a szekciót a README.md fájlod legvégére (nyisd meg a fájlt a Jegyzettömbbel, tekerj a legaljára, üss egy Entert, és illeszd be).
-
-Ezzel a formázással pontosan beilleszkedik a meglévő szöveged alá:
-Markdown
-
-
 ## Felhasznált Források & Szakirodalom (References)
 
 Az elemzés a hivatalos európai statisztikák és a nemzetközi kriminálökonómiai/addikciós szakirodalom adatain alapul:
@@ -55,3 +44,8 @@ Az elemzés a hivatalos európai statisztikák és a nemzetközi kriminálökon�
 3. **Az Ironikus Tilalom Törvénye (3. ábra):**
    * **Elméleti háttér:** Richard Cowan (1986). *The Iron Law of Prohibition*. 
    * **Koncepció:** Közgazdasági és kriminológiai törvényszerűség, amely leírja a "Hydra-effektust": a bűnüldözési szigor fokozódása (lefoglalások növekedése) a piacot a kisebb térfogatú, de potensebb, kiszámíthatatlanabb és toxikusabb szintetikus anyagok felé kényszeríti.
+  
+   * ## Futtatás
+A teljes elemzés és a grafikok reprodukálásához futtasd az R konzolban:
+```R
+source("script.R")
